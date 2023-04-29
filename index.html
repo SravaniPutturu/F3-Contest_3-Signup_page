@@ -50,9 +50,7 @@
 
       
       
-        localStorage.setItem('name', name);
-        localStorage.setItem('email', email);
-        localStorage.setItem('password', password);
+       
 
       if (name !== "" && email !== "" && password !== "") {
 
@@ -61,7 +59,10 @@
         for(let i = 0; i < 16; i++){
            accessToken += combo[Math.floor(Math.random()*combo.length)];
         }
-
+        
+        localStorage.setItem('name', name);
+        localStorage.setItem('email', email);
+        localStorage.setItem('password', password);
         localStorage.setItem('accessToken', accessToken);
 
         message.removeAttribute('id')
