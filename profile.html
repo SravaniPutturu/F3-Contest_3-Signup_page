@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 30px;
+            font-size: 25px;
+            font-weight: 700;
+        }
+        button{
+            padding: 5px;
+            background-color: white;
+            color: black;
+            width: 150px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <navbar id="nav">
+        <div header>
+          <header>Header</header>
+        </div>
+        <div id="aTag">
+          <a href="#" onclick="BackToSignIn()">Signup</a>
+          <a href="./profile.html">Profile</a>
+        </div>
+      </navbar>
+    <div class="container">
+        <p >Profile</p>
+        <p id="name"></p>
+        <p id="email"></p>
+        <p id="password"></p>
+    </div>
+</body>
+<script>
+
+    var nameEle = document.getElementById('name')
+    var emailELe = document.getElementById('email')
+    var passwordEle = document.getElementById('password')
+
+    nameEle.innerHTML = `Name : ${localStorage.getItem('name')}`
+    emailELe.innerHTML = `Email : ${localStorage.getItem('email')}`
+    passwordEle.innerHTML =`Password :  ${localStorage.getItem('password')}
+    <p>
+        <button type="button" onclick="removeProfile()">Logout</Button>
+    </p>`
+
+    function removeProfile(){
+        localStorage.clear()
+        window.history.back();
+    }
+    
+
+    function BackToSignIn(){
+      window.history.back()
+    }
+
+</script>
+</html>

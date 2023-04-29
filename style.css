@@ -1,0 +1,77 @@
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.container {
+    margin: 0 auto;
+    font-family: sans-serif;
+  }
+  navbar{
+    display: flex;
+    gap: 86%;
+    margin-right: 2%; 
+    border-bottom: 1px solid #d9cfcf;
+    padding-bottom: 5px;
+    background-color: rgb(22, 12, 12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+
+    padding: 5px;
+    width: 100%;
+  }
+a{
+  text-decoration: none;
+  color: white;
+}
+
+#aTag{
+  display: flex;
+  gap: 20px;
+}
+  
+  form,h1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+
+    max-width: 40%;
+    margin: 0 auto;
+    margin-top: 2%;
+  }
+  
+
+  
+  input{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    background-color: black;
+    color: white;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border-radius: 2px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 30%;
+    margin-top: 10%;
+  }
+  
+
+  
+  #message {
+    color: red;
+    margin-top: 20px;
+  }
+  .msg{
+    color: green;
+  }
+  
