@@ -52,14 +52,14 @@
       
        
 
-      if (name !== "" && email !== "" && password !== "") {
+      if (name !== null && email !== null && password !== null) {
 
         var combo = "abcdef1234567890"
         var accessToken = "";
         for(let i = 0; i < 16; i++){
            accessToken += combo[Math.floor(Math.random()*combo.length)];
         }
-        
+
         localStorage.setItem('name', name);
         localStorage.setItem('email', email);
         localStorage.setItem('password', password);
